@@ -1,20 +1,20 @@
 import { initDatabase } from './db/init.js'
 
-import { Post } from './db/models/post.js'
+import { Recipe } from './db/models/recipe.js'
 
 import dotenv from 'dotenv'
 dotenv.config()
 
 await initDatabase()
 
-const post = new Post({
-  title: 'Hello second post!',
+const recipe = new Recipe({
+  title: 'Hello second recipe!',
   author: 'Mark Smith',
-  contents: 'This is my new exciting content',
-  tags: ['frontend'],
+  ingredients: ['frontend'],
+  image: 'https://example.com/recipe.jpg',
 })
 
-await post.save()
+await recipe.save()
 
-const posts = await Post.find()
-console.log(posts)
+const recipes = await Recipe.find()
+console.log(recipes)
