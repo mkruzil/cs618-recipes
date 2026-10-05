@@ -1,0 +1,7 @@
+docnode_modules
+.env*
+backend
+.vscode
+.git
+.husky
+.commitlintrc.json
